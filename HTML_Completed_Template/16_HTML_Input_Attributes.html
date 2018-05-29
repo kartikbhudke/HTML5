@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTMl Input Atribute</title>
+    <style>
+    	div{
+    		color: orange;
+    		margin: 5px;
+    		padding: 10px;
+    		width: 300px;
+    		background-color: green;
+    	}
+    </style>
+</head>
+<body>
+
+    <!-- input attributes value , readonly , size , rows , cols-->
+<h2>HTML Input Attribute</h2>
+
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" >
+	</form>
+</div>
+<!--readonly-->
+
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" value="kartik" readonly >
+	</form>
+</div>
+
+<!--desabled-->
+
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" value="kartik" disabled>
+	</form>
+</div>
+
+<!--size-->
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" size="10">
+	</form>
+</div>
+
+<!--rows cols-->
+<div>
+	<form>
+		<label>Enter Your Message</label>
+		<textarea rows="5" cols="30"></textarea>
+	</form>
+</div>
+
+<!--required-->
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" required>
+		<input type="submit" value="submit">
+	</form>
+</div>
+
+<!--novalidate-->
+<div>
+	<form novalidate>
+		<label>Enter Mail</label>
+		<input type="email" required>
+		<input type="submit" value="submit">
+	</form>
+</div>
+
+<!--autofocus-->
+
+<div>
+	<form>
+		<label>User Name</label>
+		<input type="text" autofocus>
+	</form>
+</div>
+<!--placeholder-->
+<div>
+	<form>
+		
+		<input type="text" placeholder="Enter Yours Name">
+		<input type="submit" value="Submit">
+	</form>
+</div>
+
+<!-- patternsgo to http://html5pattern.com/-->
+<div>
+	<form>
+		<label>Twitter User Name</label>
+		<input type="text" pattern="^[A-Za-z0-9_]{1,15}$
+">
+<input type="submit" value="Submit">
+	</form>
+</div>
+
+    <!-- HTML 5 Form Attributes required ,
+    no-validate , autofocus , pattern , placeholder -->
+
+
+
+
+</body>
+</html>
