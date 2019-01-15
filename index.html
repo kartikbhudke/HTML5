@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function createStudent(){
+
+        var newStudent = new Object();
+
+        newStudent.fName = document.getElementById('fName').value;
+        newStudent.lName = document.getElementById('lName').value;
+        newStudent.email = document.getElementById('email').value;
+
+        if(sessionStorage.student)
+        {
+            student= JSON.parse(sessionStorage.getItem('student'));
+        }else{
+            student=[];
+        }
+        student.push(newStudent)
+        console.log(student);
+        sessionStorage.setItem('student', JSON.stringify(student));
+    }
+
+    function createStudentData() {
+
+        var newUser = new Object();
+
+        newUser.fname=document.getElementById('fname').value;
+        newUser.lname=document.getElementById('lname').value;
+        newUser.email=document.getElementById('email').value;
+
+        if (localStorage.getItem('user')){
+            user = JSON.parse(localStorage.getItem('user'));
+        }else {
+            user=[];
+        }
+
+        user.push(newUser);
+        console.log(user);
+
+        localStorage.setItem('user',JSON.stringify(user));
+
+
+        localStorage.setItem('student', newUser);
+
+
+    }
+
+
+</script>
+
+<form onsubmit="createStudentData()" action="view.html">
+        <h4>first name : <input id="fname" type="text" required></h4>
+        <h4>last name : <input id="lname" type="text" required></h4>
+        <h4>email address : <input id="email" type="email" required></h4>
+        <br>
+        <button type="submit" >create student</button>
+        <br><br>
+</form>
+
+<!--
+
+<form id="contactForm" action="view.html" method="GET">
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name">
+    </div>
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div class="field">
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+    </div>
+    <div class="field">
+        <input type="submit" value="send">
+    </div>
+</form>
+-->
+
+
+<!--<form method="get" action="view.html">
+    <table>
+        <tr>
+            <td>First Name:</td>
+            <td><input type=text name=firstname size=10></td>
+        </tr>
+        <tr>
+            <td>Last Name:</td>
+            <td><input type=text name=lastname size=10></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input type=text name=age size=10></td>
+        </tr>
+        <tr>
+            <td colspan=2><input type=submit value="Submit" onsubmit="setData()">
+            </td>
+        </tr>
+    </table>
+</form>-->
+
+</body>
+</html>
